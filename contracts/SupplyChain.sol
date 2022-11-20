@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.17;
+pragma solidity >=0.5.16 <0.9.0;
 
 contract SupplyChain {
 
@@ -58,7 +58,7 @@ contract SupplyChain {
   }
 
   modifier paidEnough(uint _price) { 
-    require(msg.value >= _price,"The amount paid is not enough"); 
+    require(msg.value >=_price);
     _;
   }
 
